@@ -4,7 +4,7 @@ import { criminalHTML } from "./CriminalHTML.js"
 const criminalsContainer = document.querySelector(".criminalsContainer")
 
 export const CriminalList = () => {
-    debugger
+    
     getCriminals()
         .then(() => {
             const criminalArray = useCriminals()

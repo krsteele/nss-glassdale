@@ -13,5 +13,23 @@
 }
 
 .criminal__name {
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.officersList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.officer__card {
+    border: 1px dotted black;
+    margin: 1rem;
+    padding: 0.5rem;
+    flex-basis: 25%;
+}
+
+.officer__name {
+    font-size: 18px;
 }

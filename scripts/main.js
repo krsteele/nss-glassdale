@@ -2,7 +2,10 @@
 // import { getCriminals, useCriminals } from "./criminals/CriminalDataProvider.js"
 import { CriminalList } from "./criminals/CriminalList.js"
 import { OfficerList } from "./officers/OfficerList.js"
+import { getConvictions } from "./convictions/ConvictionDataProvider.js"
 
 OfficerList()
 
 CriminalList()
+
+getConvictions()

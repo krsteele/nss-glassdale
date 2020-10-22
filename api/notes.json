@@ -1,3 +1,10 @@
 {
-    "notes": []
+    "notes": [
+        {
+            "date": "10/22/20",
+            "author": "Sherlock Holmes",
+            "suspect": "Professor Moriarty",
+            "note": "Prime suspect"
+        }
+    ]
 }

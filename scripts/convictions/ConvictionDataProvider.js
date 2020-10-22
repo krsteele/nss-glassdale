@@ -12,7 +12,7 @@ export const getConvictions = () => {
     .then(response => response.json())
     .then(
         parsedCrimes => {
-            console.log(parsedCrimes)
+            // console.log(parsedCrimes)
             convictions = parsedCrimes
         }
     )

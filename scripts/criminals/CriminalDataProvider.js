@@ -10,7 +10,7 @@ export const getCriminals = () => {
     .then(response => response.json())
     .then(
         parsedCriminals => { 
-            console.log(parsedCriminals)
+            // console.log(parsedCriminals)
             criminals = parsedCriminals
         }
     )

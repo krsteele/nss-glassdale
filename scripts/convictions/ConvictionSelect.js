@@ -7,6 +7,30 @@ import { getConvictions, useConvictions } from "./ConvictionDataProvider.js"
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".filters__crime")
 
+// define the event hub
+const eventHub = document.querySelector(".container")
+
+// On the event hub, listen for a "change" event.
+eventHub.addEventListener("change", (changeEvent) => {
+    console.log(changeEvent.target.value)
+  
+    // Only do this if the `crimeSelect` element was changed
+    if (changeEvent.target.id === "crimeSelect") {
+  
+      // Create custom event. Provide an appropriate name.
+      const customEvent = new CustomEvent("crimeSelected", {
+        detail: {
+          crimeThatWasChosen: parseInt(changeEvent.target.value)
+        }
+      })
+    //   debugger
+  
+      // Dispatch to event hub
+      eventHub.dispatchEvent(customEvent)
+    }
+  })
+
+
 export const ConvictionSelect = () => {
     // Get all convictions from application state
     getConvictions()
@@ -28,8 +52,8 @@ const render = convictionsCollection => {
             <option value="0">Please select a crime...</option>
             ${
                 convictionsCollection.map(convictionObj => {
-                    const conviction = convictionObj.name
-                    return `<option>${conviction}</option>`
+                    
+                    return `<option value="${convictionObj.id}">${convictionObj.name}</option>`
                 })
             }
         </select>

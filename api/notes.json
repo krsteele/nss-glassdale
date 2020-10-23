@@ -8,5 +8,13 @@
       "note": "Was in Cairo at the time of the crime.",
       "id": 1
     },
+    {
+      "dateOfInterview": "2020-10-25",
+      "timestamp": 46914.87500000221,
+      "author": "Hastings",
+      "suspect": "Duke",
+      "note": "Says he was on a fox hunt when the crime took place.",
+      "id": 2
+    }
   ]
 }

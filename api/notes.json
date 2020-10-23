@@ -15,6 +15,14 @@
       "suspect": "Duke",
       "note": "Says he was on a fox hunt when the crime took place.",
       "id": 2
+    },
+    {
+      "dateOfInterview": "2020-10-21",
+      "timestamp": 92196.31500000105,
+      "author": "Inspector Japp",
+      "suspect": "Tilly, the maid",
+      "note": "Says she was with the Duchess in Cairo. Likely story.",
+      "id": 3
     }
   ]
 }

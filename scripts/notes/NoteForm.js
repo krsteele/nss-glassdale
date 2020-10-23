@@ -7,7 +7,7 @@ const eventHub = document.querySelector(".container")
 const render = () => {
     contentTarget.innerHTML = 
         `
-        <input type="date" id="note--dateOfInterrogation"/>
+        <input type="date" id="note--dateOfInterview"/>
         <input type="text" id="note--author" placeholder="Your name here..."/>
         <input type="text" id="note--suspect" placeholder="Name of suspect"/>
         <textarea id="note--note" placeholder="Case notes here..."></textarea>

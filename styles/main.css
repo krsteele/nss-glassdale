@@ -33,3 +33,7 @@
 .officer__name {
     font-size: 18px;
 }
+
+.investigation {
+    display: flex;
+}

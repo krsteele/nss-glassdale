@@ -37,3 +37,17 @@
 .investigation {
     display: flex;
 }
+
+.criminalsContainer {
+    flex: 3;
+}
+
+.notesContainer {
+    flex: 1;
+}
+
+.note__card {
+    border: 1px dotted black;
+    margin: 1rem;
+    padding: 0.5rem;
+}

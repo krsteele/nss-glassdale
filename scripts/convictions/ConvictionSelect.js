@@ -12,8 +12,7 @@ const eventHub = document.querySelector(".container")
 
 // On the event hub, listen for a "change" event.
 eventHub.addEventListener("change", (changeEvent) => {
-    console.log(changeEvent.target.value)
-  
+    
     // Only do this if the `crimeSelect` element was changed
     if (changeEvent.target.id === "crimeSelect") {
   

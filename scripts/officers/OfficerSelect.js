@@ -8,7 +8,6 @@ export const OfficerSelect = () => {
     getOfficers()
     .then(() => {
     const officers = useOfficers()
-    console.log(officers)
     render(officers)
     }
     )}

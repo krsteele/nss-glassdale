@@ -23,11 +23,12 @@ export const saveNote = (noteObj) => {
         body: JSON.stringify(noteObj)
     })
     .then(getNotes())
-    .then(console.log(notes))
-    // .then(dispatchStateChangeEvent)
+    .then(dispatchStateChangeEvent)
 }
 
 
-// const dispatchStateChangeEvent = () => {
-
-// }
+const dispatchStateChangeEvent = () => {
+    const noteStateChangedEvent = new CustomEvent("noteStateChanged")
+    eventHub.dispatchEvent(noteStateChangedEvent)
+    console.log("note state change dispatched")
+}

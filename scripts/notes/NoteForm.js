@@ -9,7 +9,7 @@ eventHub.addEventListener("click", clickEvent => {
         // console.log(clickEvent)
         // get input values from form inputs
         const dateOfInterview = document.querySelector("#note--dateOfInterview").value
-        const timestamp = clickEvent.timeStamp
+        const timestamp = Date.now()
         // console.log(timestamp)
         const author = document.querySelector("#note--author").value
         const suspect = document.querySelector("#note--suspect").value
@@ -27,6 +27,7 @@ eventHub.addEventListener("click", clickEvent => {
         // save note obj
         saveNote(newNoteObj)
         // clear form inputs
+        NoteForm()
 
     }
 

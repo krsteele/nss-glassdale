@@ -30,5 +30,5 @@ export const saveNote = (noteObj) => {
 const dispatchStateChangeEvent = () => {
     const noteStateChangedEvent = new CustomEvent("noteStateChanged")
     eventHub.dispatchEvent(noteStateChangedEvent)
-    console.log("note state change dispatched")
+    // console.log("note state change dispatched")
 }

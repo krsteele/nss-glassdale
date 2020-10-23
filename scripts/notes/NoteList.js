@@ -10,3 +10,17 @@ export const NoteList = () => {
             render(notesArray)
         })
 }
+
+const render = (array) => {
+    let notesHTMLReps = ""
+    for (const obj of array) {
+        notesHTMLReps += NoteHTML(obj)
+
+        notesContainer.innerHTML = `
+            <h3>Case Notes</h3>
+            <section class="notesList">
+            ${notesHTMLReps}
+            </section>
+        `
+    }
+}

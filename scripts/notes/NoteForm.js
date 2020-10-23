@@ -1,3 +1,5 @@
+import { saveNote } from "./NoteDataProvider.js"
+
 const contentTarget = document.querySelector(".noteFormContainer")
 
 const eventHub = document.querySelector(".container")
@@ -23,7 +25,7 @@ eventHub.addEventListener("click", clickEvent => {
         }
 
         // save note obj
-        
+        saveNote(newNoteObj)
         // clear form inputs
 
     }

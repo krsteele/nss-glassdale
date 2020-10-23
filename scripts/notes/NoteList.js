@@ -1,6 +1,8 @@
 import { NoteHTML } from "./NoteHTML.js"
 import { getNotes, useNotes } from "./NoteDataProvider.js"
 
+const eventHub = document.querySelector(".container")
+
 const notesContainer = document.querySelector(".notesContainer")
 
 export const NoteList = () => {

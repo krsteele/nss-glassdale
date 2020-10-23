@@ -2,7 +2,7 @@ const contentTarget = document.querySelector(".noteFormContainer")
 
 const eventHub = document.querySelector(".container")
 
-eventHub.addEventListener("click", )
+// eventHub.addEventListener("click", )
 
 const render = () => {
     contentTarget.innerHTML = 

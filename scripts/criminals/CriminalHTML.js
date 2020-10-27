@@ -1,3 +1,5 @@
+const eventHub = document.querySelector(".container")
+
 export const criminalHTML = (criminalObj) => {
     return `
         <div class="criminal__card">
@@ -10,3 +12,17 @@ export const criminalHTML = (criminalObj) => {
         </div>
     `
 }
+
+eventHub.addEventListener("click", eventObj => {  
+const [prefix, id] = eventObj.target.id.split("--")
+if (prefix === "associates") {
+    // console.log("alibi button clicked", prefix, id)
+    // console.log(eventObj)
+    const eventInfo = new CustomEvent("assocBtnClicked", {
+        detail: {
+            criminalId: id
+        }
+    })
+    eventHub.dispatchEvent(eventInfo)
+}
+})

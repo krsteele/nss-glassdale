@@ -60,7 +60,7 @@ eventHub.addEventListener("officerSelected", event => {
 })
 
 // define target container for HTML
-const criminalsContainer = document.querySelector(".criminalsContainer")
+const criminalsContainer = document.querySelector(".caseDataContainer")
 
 export const CriminalList = () => {
     

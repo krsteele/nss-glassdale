@@ -23,6 +23,7 @@ if (prefix === "associates") {
             criminalId: id
         }
     })
+    // console.log(eventInfo)
     eventHub.dispatchEvent(eventInfo)
 }
 })

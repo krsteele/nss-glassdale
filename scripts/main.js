@@ -8,6 +8,8 @@ import { NoteList } from "./notes/NoteList.js"
 import { OfficerList } from "./officers/OfficerList.js"
 import { OfficerSelect } from "./officers/OfficerSelect.js"
 // import { getConvictions } from "./convictions/ConvictionDataProvider.js"
+// import the module for adding a list of alibis to a criminal card
+import "./criminals/AlibiHTML.js"
 
 OfficerList()
 

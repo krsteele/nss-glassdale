@@ -2,6 +2,10 @@ import { useCriminals } from "./CriminalDataProvider.js"
 
 const eventHub = document.querySelector(".container")
 
+eventHub.addEventListener("assocBtnClicked", (eventObj)=> {
+    console.log(eventObj)
+})
+
 
 const render = (criminalObj) => {
     const contentTarget = document.querySelector(`#criminal-${criminalObj.id}`)

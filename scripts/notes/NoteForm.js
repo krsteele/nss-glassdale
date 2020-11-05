@@ -1,3 +1,4 @@
+import { getCriminals, useCriminals } from "../criminals/CriminalDataProvider.js"
 import { saveNote } from "./NoteDataProvider.js"
 
 const contentTarget = document.querySelector(".noteFormContainer")
@@ -12,7 +13,7 @@ eventHub.addEventListener("click", clickEvent => {
         const timestamp = Date.now()
         // console.log(timestamp)
         const author = document.querySelector("#note--author").value
-        const suspect = document.querySelector("#note--suspect").value
+        const criminalId = document.getElementById("note--suspect").value
         const note = document.querySelector("#note--note").value
 
         // make note obj with form values
@@ -20,10 +21,10 @@ eventHub.addEventListener("click", clickEvent => {
             dateOfInterview,
             timestamp,
             author,
-            suspect,
+            criminalId,
             note
         }
-
+        // console.log(newNoteObj);
         // save note obj
         saveNote(newNoteObj)
         // clear form inputs
@@ -33,17 +34,28 @@ eventHub.addEventListener("click", clickEvent => {
 
 })
 
-const render = () => {
-    contentTarget.innerHTML = 
-        `
+const render = (criminalArray) => {
+    contentTarget.innerHTML = `
         <input type="date" id="note--dateOfInterview"/>
         <input type="text" id="note--author" placeholder="Your name here..."/>
-        <input type="text" id="note--suspect" placeholder="Name of suspect"/>
+        <select id="note--suspect" class="criminalSelect">
+        <option value="0">Please select suspect...</option>
+        ${
+            criminalArray.map(criminalObj => {
+                
+                return `<option value="${criminalObj.id}">${criminalObj.name}</option>`
+            })
+        }
+        </select>
         <textarea id="note--note" placeholder="Case notes here..."></textarea>
         <button id="saveNote">Save Note</button>
         `
 }
 
 export const NoteForm = () => {
-    render()
+    getCriminals()
+        .then(() => {
+            const criminals = useCriminals()
+            render(criminals)
+        })
 }

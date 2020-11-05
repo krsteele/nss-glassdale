@@ -22,7 +22,7 @@ export const saveNote = (noteObj) => {
             'Content-Type': 'application/json'},
         body: JSON.stringify(noteObj)
     })
-    .then(getNotes())
+    .then(getNotes)
     .then(dispatchStateChangeEvent)
 }
 

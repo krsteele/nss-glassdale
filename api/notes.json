@@ -1,52 +1,36 @@
 {
   "notes": [
     {
-      "dateOfInterview": "2020-10-25",
-      "timestamp": 39773.27499999956,
-      "author": "Poirot",
-      "suspect": "Dutchess",
-      "note": "Was in Cairo at the time of the crime.",
+      "dateOfInterview": "2020-11-04",
+      "timestamp": 1604548425766,
+      "author": "Bob",
+      "criminalId": 16,
+      "note": "test",
       "id": 1
     },
     {
-      "dateOfInterview": "2020-10-25",
-      "timestamp": 46914.87500000221,
-      "author": "Hastings",
-      "suspect": "Duke",
-      "note": "Says he was on a fox hunt when the crime took place.",
+      "dateOfInterview": "2020-11-26",
+      "timestamp": 1604548467893,
+      "author": "Bob",
+      "criminalId": 3,
+      "note": "test2",
       "id": 2
     },
     {
-      "dateOfInterview": "2020-10-21",
-      "timestamp": 92196.31500000105,
-      "author": "Inspector Japp",
-      "suspect": "Tilly, the maid",
-      "note": "Says she was with the Duchess in Cairo. Likely story.",
+      "dateOfInterview": "2020-11-05",
+      "timestamp": 1604591921388,
+      "author": "Lulu",
+      "criminalId": 11,
+      "note": "test3",
       "id": 3
     },
     {
-      "dateOfInterview": "2020-10-30",
-      "timestamp": 70889.27499999409,
-      "author": "Hastings",
-      "suspect": "Beatrice",
-      "note": "Lovely young woman. Couldn't have possibly had anything to do with it.",
+      "dateOfInterview": "2020-11-05",
+      "timestamp": 1604594182072,
+      "author": "lulu",
+      "criminalId": 1,
+      "note": "test4",
       "id": 4
-    },
-    {
-      "dateOfInterview": "2020-10-14",
-      "timestamp": "12/31/1969",
-      "author": "Inspector Japp",
-      "suspect": "Madelyn Lebsack",
-      "note": "She saw a shifty character getting off the train around the time the crime was committed. ",
-      "id": 5
-    },
-    {
-      "dateOfInterview": "2020-10-23",
-      "timestamp": 1603479887862,
-      "author": "Poirot",
-      "suspect": "Abigayle Hayes",
-      "note": "Sure she spoke to Michel Stamm on the train to Brighton.",
-      "id": 6
     }
   ]
 }

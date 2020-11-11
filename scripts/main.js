@@ -1,5 +1,4 @@
 // import { getOfficers, useOfficers } from "./officers/OfficerDataProvider.js"
-// import { getCriminals, useCriminals } from "./criminals/CriminalDataProvider.js"
 import { ConvictionSelect } from "./convictions/ConvictionSelect.js"
 import { CriminalList } from "./criminals/CriminalList.js"
 import { getNotes } from "./notes/NoteDataProvider.js"
@@ -12,6 +11,7 @@ import { renderWitnessesButton } from "./witnesses/WitnessStmntButton.js"
 // import the module for adding a list of alibis to a criminal card
 import "./criminals/AlibiHTML.js"
 import "./witnesses/WitnessStmntList.js"
+import { getCriminals } from "./criminals/CriminalDataProvider.js"
 
 OfficerList()
 
@@ -23,7 +23,9 @@ OfficerSelect()
 
 NoteForm()
 
-NoteList()
+getNotes()
+    .then(getCriminals)
+    .then(NoteList)
 
 renderWitnessesButton()
 

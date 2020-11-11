@@ -4,7 +4,7 @@
       "dateOfInterview": "2020-11-04",
       "timestamp": 1604548425766,
       "author": "Bob",
-      "criminalId": "16",
+      "criminalId": 16,
       "note": "test",
       "id": 1
     },
@@ -12,57 +12,25 @@
       "dateOfInterview": "2020-11-26",
       "timestamp": 1604548467893,
       "author": "Bob",
-      "criminalId": "3",
+      "criminalId": 3,
       "note": "test2",
       "id": 2
     },
     {
-      "dateOfInterview": "2020-11-04",
-      "timestamp": 1604549851014,
-      "author": "Bob",
-      "criminalId": "1",
+      "dateOfInterview": "2020-11-05",
+      "timestamp": 1604591921388,
+      "author": "Lulu",
+      "criminalId": 11,
       "note": "test3",
       "id": 3
     },
     {
-      "dateOfInterview": "2020-11-04",
-      "timestamp": 1604550026985,
-      "author": "Bob",
-      "criminalId": "2",
+      "dateOfInterview": "2020-11-05",
+      "timestamp": 1604594182072,
+      "author": "lulu",
+      "criminalId": 1,
       "note": "test4",
       "id": 4
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "timestamp": 1604550305859,
-      "author": "Bob",
-      "criminalId": "4",
-      "note": "test5",
-      "id": 5
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "timestamp": 1604550349863,
-      "author": "Bob",
-      "criminalId": "5",
-      "note": "test6",
-      "id": 6
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "timestamp": 1604550826686,
-      "author": "Larry",
-      "criminalId": "1",
-      "note": "test7",
-      "id": 7
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "timestamp": 1604550899443,
-      "author": "Lulu",
-      "criminalId": "2",
-      "note": "test8",
-      "id": 8
     }
   ]
 }

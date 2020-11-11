@@ -27,10 +27,11 @@ const render = (criminalObj) => {
     // console.log(contentTarget)
     contentTarget.innerHTML += 
         `<div class="alibi__list">
+            <h6>Known Associates:</h6>
             ${criminalObj.known_associates.map(alibiObj => {
                 return `
                     <p>${alibiObj.name}</p>
-                    <p>${alibiObj.alibi}</p>`
+                    <p>Alibi: ${alibiObj.alibi}</p>`
             }).join("")}
         </div>`
 }

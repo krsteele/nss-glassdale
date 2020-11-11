@@ -2,6 +2,8 @@ import { getCriminals, useCriminals } from "./CriminalDataProvider.js"
 import { criminalHTML } from "./CriminalHTML.js"
 import { useConvictions } from "../convictions/ConvictionDataProvider.js"
 import { getOfficers } from "../officers/OfficerDataProvider.js"
+import { getFacilities, useFacilities } from "../facility/FacilityProvider.js"
+import { getCriminalFacilities, useCriminalFacilities } from "../facility/CriminalFacilityProvider.js"
 
 
 // define the event hub
@@ -63,27 +65,51 @@ eventHub.addEventListener("officerSelected", event => {
 const criminalsContainer = document.querySelector(".caseDataContainer")
 
 export const CriminalList = () => {
-    
+    // retrieve and store information on facilities, criminals, and facilities each criminal spent time in
     getCriminals()
+    .then(getFacilities())
+    .then(getCriminalFacilities())
         .then(() => {
             const criminalArray = useCriminals()
-            render (criminalArray)
+            const facilityArray = useFacilities()
+            const criminalFacilitiesArray = useCriminalFacilities()
+            // use stored data as arguments in render function
+            render(criminalArray, facilityArray, criminalFacilitiesArray)
             
         }
     )
 }
+// 
+const render = (criminals, facilities, crimFacRelationships) => {
+  // iterate all criminals
+  const criminalHTMLRepresentations = criminals.map(criminalObj => {
+    // filter all relationships to get only ones for this criminal
+    const facilityRelationshipsForThisCriminal = crimFacRelationships.filter(crimFac => crimFac.criminalId === criminalObj.id)
 
-const render = (criminalArray) => {
-    let criminalHTMLRepresentations = ""
-            for (const criminal of criminalArray) {
+    // use the relationship to find the matching facilities
+    const relatedFacilities = facilityRelationshipsForThisCriminal.map(crimFac => {
+      const matchingFacilityObj = facilities.find(facility => facility.id === crimFac.facilityId)
+      return matchingFacilityObj
+    })
+    return criminalHTML(criminalObj, relatedFacilities)
+  }
+  ).join("")
 
-                criminalHTMLRepresentations += criminalHTML(criminal)
-
-                criminalsContainer.innerHTML = `
-                    <h3>Glassdale Criminals</h3>
-                    <section class="criminalsList">
-                        ${criminalHTMLRepresentations}
-                    </section>
-                `
-            }
+  criminalsContainer.innerHTML = `
+        <h3>Glassdale Criminals</h3>
+        <section class="criminalsList">
+             ${criminalHTMLRepresentations}
+        </section>`
 }
+// let criminalHTMLRepresentations = ""
+//         for (const criminal of criminalArray) {
+
+//             criminalHTMLRepresentations += criminalHTML(criminal)
+
+//             criminalsContainer.innerHTML = `
+//                 <h3>Glassdale Criminals</h3>
+//                 <section class="criminalsList">
+//                     ${criminalHTMLRepresentations}
+//                 </section>
+//             `
+//         }

@@ -1,8 +1,8 @@
 const eventHub = document.querySelector(".container")
 
-export const criminalHTML = (criminalObj, facilityObj) => {
+export const criminalHTML = (criminalObj, facilities) => {
     return `
-        <div class="criminal__card">
+        <div id="criminal-${criminalObj.id}" class="criminal__card">
             <h4 class="criminal__name">${criminalObj.name}</h4>
             <div class="criminal__details">
                 <div class="criminal__age">Age: ${criminalObj.age}</div>
@@ -12,7 +12,7 @@ export const criminalHTML = (criminalObj, facilityObj) => {
                 <div class="criminal__facilities">
                 <h6>Facilities</h6>
                 <ul>
-                ${facilityObj.map(fac => `<li>${fac.facilityName}</li>`).join("")}
+                ${facilities.map(fac => `<li>${fac.facilityName}</li>`).join("")}
                 </ul>
                 </div>
             </div>

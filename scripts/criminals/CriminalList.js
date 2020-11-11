@@ -82,7 +82,7 @@ export const CriminalList = () => {
 // 
 const render = (criminals, facilities, crimFacRelationships) => {
   // iterate all criminals
-  criminalsContainer.innerHTML = criminals.map(criminalObj => {
+  const criminalHTMLRepresentations = criminals.map(criminalObj => {
     // filter all relationships to get only ones for this criminal
     const facilityRelationshipsForThisCriminal = crimFacRelationships.filter(crimFac => crimFac.criminalId === criminalObj.id)
 
@@ -94,6 +94,12 @@ const render = (criminals, facilities, crimFacRelationships) => {
     return criminalHTML(criminalObj, relatedFacilities)
   }
   ).join("")
+
+  criminalsContainer.innerHTML = `
+        <h3>Glassdale Criminals</h3>
+        <section class="criminalsList">
+             ${criminalHTMLRepresentations}
+        </section>`
 }
 // let criminalHTMLRepresentations = ""
 //         for (const criminal of criminalArray) {

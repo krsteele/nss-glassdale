@@ -21,7 +21,7 @@ eventHub.addEventListener("click", clickEvent => {
             dateOfInterview,
             timestamp,
             author,
-            criminalId,
+            criminalId: parseInt(criminalId),
             note
         }
         // console.log(newNoteObj);
@@ -44,14 +44,14 @@ const render = (criminalArray) => {
             criminalArray.map(criminalObj => {
                 
                 return `<option value="${criminalObj.id}">${criminalObj.name}</option>`
-            })
+            }).join()
         }
         </select>
         <textarea id="note--note" placeholder="Case notes here..."></textarea>
         <button id="saveNote">Save Note</button>
         `
 }
-
+   
 export const NoteForm = () => {
     getCriminals()
         .then(() => {

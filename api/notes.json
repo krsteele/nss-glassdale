@@ -7,30 +7,6 @@
       "criminalId": 16,
       "note": "test",
       "id": 1
-    },
-    {
-      "dateOfInterview": "2020-11-26",
-      "timestamp": 1604548467893,
-      "author": "Bob",
-      "criminalId": 3,
-      "note": "test2",
-      "id": 2
-    },
-    {
-      "dateOfInterview": "2020-11-05",
-      "timestamp": 1604591921388,
-      "author": "Lulu",
-      "criminalId": 11,
-      "note": "test3",
-      "id": 3
-    },
-    {
-      "dateOfInterview": "2020-11-05",
-      "timestamp": 1604594182072,
-      "author": "lulu",
-      "criminalId": 1,
-      "note": "test4",
-      "id": 4
     }
   ]
 }

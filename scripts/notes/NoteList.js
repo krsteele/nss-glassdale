@@ -1,5 +1,5 @@
 import { NoteHTML } from "./NoteHTML.js"
-import { getNotes, useNotes } from "./NoteDataProvider.js"
+import { deleteNote, getNotes, useNotes } from "./NoteDataProvider.js"
 import { useCriminals } from "../criminals/CriminalDataProvider.js"
 
 const eventHub = document.querySelector(".container")
@@ -37,3 +37,14 @@ const render = (stringOfNoteHTML) => {
             </section>
         `
     }
+
+    eventHub.addEventListener("click", clickEvent => {
+        if (clickEvent.target.id.startsWith("deleteNote--")) {
+            const [prefix, id] = clickEvent.target.id.split("--")
+
+            deleteNote(id)
+            .then(NoteList)
+
+    }})
+        
+    

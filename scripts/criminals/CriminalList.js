@@ -2,6 +2,8 @@ import { getCriminals, useCriminals } from "./CriminalDataProvider.js"
 import { criminalHTML } from "./CriminalHTML.js"
 import { useConvictions } from "../convictions/ConvictionDataProvider.js"
 import { getOfficers } from "../officers/OfficerDataProvider.js"
+import { getFacilities, useFacilities } from "../facility/FacilityProvider.js"
+import { getCriminalFacilities, useCriminalFacilities } from "../facility/CriminalFacilityProvider.js"
 
 
 // define the event hub
@@ -65,9 +67,13 @@ const criminalsContainer = document.querySelector(".caseDataContainer")
 export const CriminalList = () => {
     
     getCriminals()
+    .then(getFacilities())
+    .then(getCriminalFacilities())
         .then(() => {
             const criminalArray = useCriminals()
-            render (criminalArray)
+            const facilityArray = useFacilities()
+            const criminalFacilitiesArray = useCriminalFacilities()
+            render(criminalArray, facilityArray, criminalFacilitiesArray)
             
         }
     )

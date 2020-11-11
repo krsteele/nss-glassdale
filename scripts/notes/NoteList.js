@@ -20,7 +20,7 @@ export const NoteList = () => {
 
         const arrayOfNoteRepresentations = notes.map(note => {
             // console.log("current note being searched:", note, note.criminalId);
-            const criminal = criminals.find(criminal => criminal.id === parseInt(note.criminalId))
+            const criminal = criminals.find(criminal => criminal.id === note.criminalId)
 
             const html = NoteHTML(note, criminal)
             return html

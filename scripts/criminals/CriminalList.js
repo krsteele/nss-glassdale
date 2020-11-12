@@ -65,6 +65,9 @@ eventHub.addEventListener("officerSelected", event => {
     }
 })
 
+//  EVENT LISTENER FOR SHOW ALL CRIMINALS BUTTON
+eventHub.addEventListener("criminalsClicked", () => CriminalList())
+
 // define target container for HTML
 const criminalsContainer = document.querySelector(".caseDataContainer")
 

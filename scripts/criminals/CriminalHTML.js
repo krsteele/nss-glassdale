@@ -10,7 +10,7 @@ export const criminalHTML = (criminalObj, facilities) => {
                 <div class="criminal__arrestingOfficer">Arresting Officer: ${criminalObj.arrestingOfficer}</div>
                 <div class="criminal__incarceration">Incarcerated between ${new Date(criminalObj.incarceration.start).toLocaleDateString('en-US')} and ${new Date(criminalObj.incarceration.end).toLocaleDateString('en-US')}</div>
                 <div class="criminal__facilities">
-                <h6>Facilities</h6>
+                <h5>Facilities</h5>
                 <ul>
                 ${facilities.map(fac => `<li>${fac.facilityName}</li>`).join("")}
                 </ul>

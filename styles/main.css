@@ -1,11 +1,11 @@
-.criminalsList, .witnessList {
+.criminalsList, .witnessList, .facilitiesList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-between;
 }
 
-.criminal__card, .witness__card {
+.criminal__card, .witness__card, .facility__card{
     border: 1px dotted black;
     margin: 1rem;
     padding: 0.5rem;

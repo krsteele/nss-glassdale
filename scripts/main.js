@@ -14,6 +14,7 @@ import "./witnesses/WitnessStmntList.js"
 import { getCriminals } from "./criminals/CriminalDataProvider.js"
 import { renderFacilitiesButton } from "./facility/DisplayFacilitiesButton.js"
 import "./facility/FacilityList.js"
+import { renderCriminalsButton } from "./criminals/DisplayCriminalsButton.js"
 
 OfficerList()
 
@@ -31,6 +32,7 @@ getNotes()
 
 renderWitnessesButton()
 renderFacilitiesButton()
+renderCriminalsButton()
 
 // getConvictions() 
 // getNotes()  

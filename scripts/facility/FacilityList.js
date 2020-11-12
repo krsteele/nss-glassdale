@@ -2,6 +2,7 @@ import { useCriminals } from "../criminals/CriminalDataProvider.js"
 import { useCriminalFacilities } from "./CriminalFacilityProvider.js"
 import { renderFacilitiesButton } from "./DisplayFacilitiesButton.js"
 import { useFacilities } from "./FacilityProvider.js"
+import { facilityHTML } from "./Facility.js"
 
 
 
@@ -19,12 +20,12 @@ const FacilitiesList = () => {
     const criminalFacilityRelationships = useCriminalFacilities()
     const criminals = useCriminals()
 
-    // console.log("arrays for FacilitiesList: ", facilities, criminalFacilityRelationships, criminals)
+    console.log("arrays for FacilitiesList: ", facilities, criminalFacilityRelationships, criminals)
     render(facilities, criminalFacilityRelationships, criminals)
 }
 
 const render = (facilities, relationships, criminals) => {
-    facilitiesHTMLRepresentations = facilities.map(facObj => {
+    const facilitiesHTMLRepresentations = facilities.map(facObj => {
         const facilityCriminalRelationship = relationships.filter(rel => rel.facilityId === facObj.id)
 
         const relatedCriminalsArray = facilityCriminalRelationship.map(fcr => {
